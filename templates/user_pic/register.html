@@ -1,0 +1,14 @@
+{% extends 'user_pic/base.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block container %}
+<h2>会員登録フォーム</h2>
+<form class="" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="submit">Submit</button>
+</form>
+{% endblock %}

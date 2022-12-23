@@ -1,0 +1,14 @@
+{% extends 'user_pic/base.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block container %}
+ <form action="" method="POST">{% csrf_token %}
+    {{form.last_name}}
+    {{form.first_name}}
+    
+    <input type="submit" value="更新する">
+ </form>
+{% endblock %}

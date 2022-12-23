@@ -1,0 +1,90 @@
+{% extends 'user_pic/base.html' %}
+
+{% block header %}
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom container">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <!-- <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 21.132812 12 C 20.079884 12 19.101556 12.55485 18.560547 13.457031 L 16.724609 16.513672 C 16.542289 16.815645 16.218154 17 15.867188 17 L 11 17 C 9.9069372 17 9 17.906937 9 19 L 9 35 C 9 36.093063 9.9069372 37 11 37 L 39 37 C 40.093063 37 41 36.093063 41 35 L 41 19 C 41 17.906937 40.093063 17 39 17 L 34.132812 17 C 33.779742 17 33.456382 16.817444 33.275391 16.515625 A 1.0001 1.0001 0 0 0 33.275391 16.513672 L 31.439453 13.457031 C 30.898444 12.55485 29.919615 12 28.867188 12 L 21.132812 12 z M 12 14 C 11.448 14 11 14.448 11 15 L 11 16 L 15 16 L 15 15 C 15 14.448 14.552 14 14 14 L 12 14 z M 21.132812 14 L 28.867188 14 C 29.21876 14 29.543618 14.182556 29.724609 14.484375 A 1.0001 1.0001 0 0 0 29.724609 14.486328 L 31.558594 17.542969 C 32.099603 18.445103 33.079884 19 34.132812 19 L 39 19 L 39 35 L 11 35 L 11 19 L 15.867188 19 C 16.919615 19 17.897599 18.446016 18.439453 17.544922 A 1.0001 1.0001 0 0 0 18.441406 17.542969 L 20.275391 14.486328 A 1.0001 1.0001 0 0 0 20.275391 14.484375 C 20.456335 14.18265 20.779742 14 21.132812 14 z M 25 20 C 21.145849 20 18 23.145852 18 27 C 18 30.854148 21.145849 34 25 34 C 28.854151 34 32 30.854148 32 27 C 32 23.145852 28.854151 20 25 20 z M 34 20 A 1 1 0 0 0 34 22 A 1 1 0 0 0 34 20 z M 25 22 C 27.773271 22 30 24.226731 30 27 C 30 29.773269 27.773271 32 25 32 C 22.226729 32 20 29.773269 20 27 C 20 24.226731 22.226729 22 25 22 z"/></svg> -->
+      <!-- <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 100 100" height="100px" id="Layer_1" version="1.1" viewBox="0 0 100 100" width="100px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M75.032,30.935h-9.692c-0.829,0-1.5,0.671-1.5,1.5v5.184c0,0.829,0.671,1.5,1.5,1.5h9.692   c0.829,0,1.5-0.671,1.5-1.5v-5.184C76.532,31.606,75.86,30.935,75.032,30.935z M73.532,36.119h-6.692v-2.184h6.692V36.119z" fill="#434E66"/><path d="M76.346,25.502H63.071l-0.402-4.851c-0.056-2.707-3.276-4.429-5.5-4.429H42.831   c-2.223,0-5.444,1.723-5.5,4.429l-0.402,4.851H23.654c-4.136,0-7.5,3.364-7.5,7.5V69.74c0,4.136,3.364,7.5,7.5,7.5h52.691   c4.136,0,7.5-3.364,7.5-7.5V33.002C83.846,28.867,80.481,25.502,76.346,25.502z M80.846,69.74c0,2.481-2.019,4.5-4.5,4.5H23.654   c-2.481,0-4.5-2.019-4.5-4.5V44.479h10.754c0.829,0,1.5-0.671,1.5-1.5s-0.671-1.5-1.5-1.5H19.154v-8.477c0-2.481,2.019-4.5,4.5-4.5   H38.31c0.78,0,1.43-0.598,1.495-1.376l0.521-6.28c0.003-0.041,0.005-0.083,0.005-0.124c0-0.557,1.421-1.5,2.5-1.5h14.338   c1.079,0,2.5,0.943,2.5,1.5c0,0.042,0.002,0.083,0.005,0.124l0.521,6.28c0.064,0.778,0.714,1.376,1.495,1.376h14.656   c2.481,0,4.5,2.019,4.5,4.5V69.74z" fill="#434E66"/><path d="M54.069,54.132c3.071,0,5.569-2.498,5.569-5.569s-2.499-5.569-5.569-5.569S48.5,45.493,48.5,48.563   S50.998,54.132,54.069,54.132z M54.069,45.994c1.417,0,2.569,1.153,2.569,2.569s-1.153,2.569-2.569,2.569S51.5,49.98,51.5,48.563   S52.652,45.994,54.069,45.994z" fill="#434E66"/><path d="M72.876,41.479H60.622c-0.069,0-0.135,0.011-0.201,0.02c-2.623-2.762-6.319-4.496-10.42-4.496   c-2.12,0-4.163,0.451-6.072,1.341c-0.75,0.35-1.076,1.242-0.726,1.993c0.35,0.75,1.242,1.076,1.993,0.726   c1.509-0.703,3.125-1.06,4.805-1.06c6.278,0,11.386,5.107,11.386,11.385c0,6.278-5.107,11.386-11.386,11.386   s-11.386-5.107-11.386-11.386c0-1.103,0.157-2.194,0.467-3.241c0.235-0.794-0.218-1.629-1.012-1.864   c-0.794-0.236-1.629,0.218-1.864,1.012c-0.393,1.324-0.591,2.701-0.591,4.093c0,7.932,6.454,14.386,14.386,14.386   s14.386-6.454,14.386-14.386c0-2.503-0.645-4.857-1.774-6.909h10.264c0.829,0,1.5-0.671,1.5-1.5S73.705,41.479,72.876,41.479z" fill="#434E66"/></g></svg> -->
+      <span class="fs-3">PHOTO_rium</span>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Pictures</a>
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Profile</a>
+      <a class="me-3 py-2 text-dark text-decoration-none" href="#">Official SNS</a>
+    </nav>
+  </div>
+
+{% endblock %}
+
+{% block container %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">Yonin no Kappa</h1>
+      <p class="lead fw-normal">I love walking with my camera
+        If you see me in your life pls say me “Hii”
+        I’ll take pictures for you
+        #photographer #写真家</p>
+      <a class="btn btn-outline-secondary" href="#">My Profile</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+<div class="container px-30 ">
+<div class="row">
+    <div class="col-lg-4">
+      <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+      <?xml version="1.0" ?><svg id="template" viewBox="0 0 32 32" height="30%" width="30%"xmlns="http://www.w3.org/2000/svg"><title/><path d="M28,8.342H24.618l-1.1-2.173a2.959,2.959,0,0,0-2.649-1.624H11.136A2.959,2.959,0,0,0,8.487,6.169L7.382,8.342H4A2.357,2.357,0,0,0,1.646,10.7V25.1A2.357,2.357,0,0,0,4,27.455H28A2.357,2.357,0,0,0,30.354,25.1V10.7A2.357,2.357,0,0,0,28,8.342ZM9.119,6.491a2.253,2.253,0,0,1,2.017-1.237h9.728a2.253,2.253,0,0,1,2.017,1.237h0l.942,1.852H8.177ZM29.646,25.1A1.648,1.648,0,0,1,28,26.746H4A1.648,1.648,0,0,1,2.354,25.1V10.7A1.648,1.648,0,0,1,4,9.051H28A1.648,1.648,0,0,1,29.646,10.7Z"/><path d="M16,10.44a7.069,7.069,0,1,0,7.068,7.069A7.077,7.077,0,0,0,16,10.44Zm0,13.428a6.36,6.36,0,1,1,6.359-6.359A6.365,6.365,0,0,1,16,23.868Z"/><path d="M16,12.543a4.966,4.966,0,1,0,4.966,4.966A4.972,4.972,0,0,0,16,12.543Zm0,9.223a4.257,4.257,0,1,1,4.257-4.257A4.262,4.262,0,0,1,16,21.766Z"/></svg>  
+      <h2>Pictures</h2>
+      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+      <?xml version="1.0" ?><svg data-name="Ebene 1" id="Ebene_1" viewBox="0 0 100 100" height="30%" width="30%"xmlns="http://www.w3.org/2000/svg"><title/><path d="M63.37,13.79c-7.53-2.13-14.42-2.7-20.51-1.68a21,21,0,0,0-11.07,5.13,21.42,21.42,0,0,0-5.34,8.66h0l-.24.68c-.25.74-.52,1.47-.79,2.21A37.65,37.65,0,0,0,24,33.34a10.87,10.87,0,0,0-.11,4.5c.12.61.26,1.14.4,1.62a3.54,3.54,0,0,1-.13,3.2,23.33,23.33,0,0,1-2.94,4.53c-.16.2-.35.4-.54.61-1,1.12-2.47,2.66-2,4.69A4.81,4.81,0,0,0,21.49,56l.22.08a2.72,2.72,0,0,1,.6.26.55.55,0,0,1,0,.12c0,.42-.07,1-.12,1.49-.13,1.14-.21,1.83.16,2.38a12.46,12.46,0,0,0,1,1.18,2.5,2.5,0,0,0-.53,1.78A4.08,4.08,0,0,0,24,65.18a6.83,6.83,0,0,1,.65.83,8.26,8.26,0,0,1-.28.94,8.61,8.61,0,0,0-.59,3.11c.19,2.74,2.37,4.57,6.47,5.43a31.37,31.37,0,0,0,7.28.46c.51,0,1.12,0,1.5,0A16.38,16.38,0,0,1,40,79.15c.12.55.24,1.1.38,1.59.6,2.2,1.78,6.71,1.79,6.71l.38,1.46,30-14.28-.36-1.06c0-.06-2.33-7-.56-11.65a39.68,39.68,0,0,1,3.6-6.29C78,51.38,81,46.58,81.37,41.9,81.83,35.12,81,18.79,63.37,13.79Zm15.5,27.94c-.28,4-3.19,8.55-5.76,12.54A41.31,41.31,0,0,0,69.29,61c-1.66,4.34-.44,10,.2,12.28l-25.32,12c-.4-1.51-1-3.86-1.41-5.27-.13-.46-.24-1-.35-1.48A15.69,15.69,0,0,0,41,74.25c-.41-.69-1.07-.82-2.34-.82l-1.17,0a28.29,28.29,0,0,1-6.7-.41c-4.33-.91-4.44-2.6-4.48-3.15a6.71,6.71,0,0,1,.46-2.15,5.93,5.93,0,0,0,.42-1.8,3.91,3.91,0,0,0-1.26-2.39c-.15-.17-.35-.41-.47-.58a2.28,2.28,0,0,1,.48-.51L27,61.6l-1-1c-.53-.53-1.14-1.17-1.43-1.5,0-.24.06-.62.09-.89a15.07,15.07,0,0,0,.14-1.77,2.82,2.82,0,0,0-2.27-2.73l-.19-.07a2.31,2.31,0,0,1-1.29-1.73c-.17-.72.66-1.62,1.39-2.41.22-.24.44-.47.63-.7a26.33,26.33,0,0,0,3.24-5,5.94,5.94,0,0,0,.32-5c-.12-.42-.25-.89-.35-1.43a8.07,8.07,0,0,1,.09-3.45,36,36,0,0,1,1.37-4.24c.29-.76.57-1.52.82-2.29.07-.22.15-.43.22-.64a19.1,19.1,0,0,1,4.7-7.68,18.92,18.92,0,0,1,9.77-4.49c5.72-1,12.25-.4,19.41,1.63C78,20.54,79.4,34.06,78.87,41.73Z"/></svg>
+    
+      <h2>Profile</h2>
+      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="30%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 550 550" width="30%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="matrix(2.05761,0,0,2.05761,-1.20165,-3.25926)"><g transform="matrix(1.32638,0,0,1.29609,-233.735,-169.039)"><path d="M362.065,192.263C362.065,179.602 357.24,168.085 349.371,159.535C340.859,150.285 331.402,142.256 331.402,142.256L235.895,144.506C210.14,144.506 189.229,165.905 189.229,192.263L188.414,291.744C188.414,291.744 194.376,298.556 202.707,307.184C211.169,315.947 222.917,321.381 235.895,321.381L315.399,321.381C341.155,321.381 362.065,299.982 362.065,273.625L362.065,192.263Z" style="fill:white;stroke:black;stroke-width:3.78px;stroke-linecap:round;stroke-miterlimit:1.5;"/></g><g transform="matrix(1.32638,0,0,1.29609,-247.49,-182.793)"><path d="M362.065,192.263C362.065,165.905 341.155,144.506 315.399,144.506L235.895,144.506C210.14,144.506 189.229,165.905 189.229,192.263L189.229,273.625C189.229,299.982 210.14,321.381 235.895,321.381L315.399,321.381C341.155,321.381 362.065,299.982 362.065,273.625L362.065,192.263Z" style="fill:white;stroke:black;stroke-width:3.78px;stroke-linecap:round;stroke-miterlimit:1.5;"/></g><g transform="matrix(1.45024,0,0,0.775364,-263.688,-77.1818)"><ellipse cx="306.761" cy="172.815" rx="4.446" ry="8.315" style="stroke:black;stroke-width:4.26px;stroke-linecap:round;stroke-miterlimit:1.5;"/></g><g transform="matrix(1.44062,0,0,1.44062,-312.795,-146.422)"><circle cx="298.892" cy="184.554" r="36.827" style="fill:white;stroke:black;stroke-width:3.44px;stroke-linecap:round;stroke-miterlimit:1.5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-21.2495,129.951)"><path d="M168.968,58.04L178.722,67.719" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-13.5744,117.517)"><path d="M169.255,58.327L178.898,68.193" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-7.7057,103.45)"><path d="M168.853,57.925L178.528,67.845" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,86.6051)"><path d="M168.757,57.829L178.477,67.792" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,69.7602)"><path d="M168.847,57.885L178.477,67.772" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,53.8872)"><path d="M168.847,57.885L178.477,67.772" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,37.0423)"><path d="M168.756,57.792L178.477,67.795" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,20.1973)"><path d="M168.847,57.885L178.477,67.772" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,3.04061)"><path d="M168.756,57.828L178.477,67.792" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-6.07348,-13.7768)"><path d="M168.756,57.792L178.477,67.795" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-8.36593,-31.768)"><path d="M168.854,57.892L178.678,68.002" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-30.9787,139.854)"><path d="M168.666,57.738L178.257,67.552" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-42.1292,146.383)"><path d="M168.989,58.031L178.266,67.561" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-56.3332,150.482)"><path d="M168.979,58.021L178.466,67.785" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-72.5179,151.628)"><path d="M168.984,58.027L178.429,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.35536,0,0,1.41516,-78.0503,151.628)"><path d="M168.909,58.027L178.486,67.746" style="fill:none;stroke:black;stroke-width:3.58px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-104.09,151.628)"><path d="M168.955,58.027L178.451,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-121.255,151.628)"><path d="M168.955,58.027L178.431,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-137.926,151.628)"><path d="M168.955,58.027L178.431,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-155.257,151.628)"><path d="M168.955,58.027L178.431,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.41516,0,0,1.41516,-171.13,151.628)"><path d="M168.955,58.027L178.451,67.746" style="fill:none;stroke:black;stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.81672,0,0,1.81672,-257.475,124.703)"><path d="M170,59.072L177.667,66.962" style="fill:none;stroke:black;stroke-width:2.73px;stroke-linejoin:miter;stroke-miterlimit:5;"/></g><g transform="matrix(1.00715,0.178409,-0.178409,1.00715,-121.245,138.471)"><path d="M170,59.072L177.667,66.962" style="fill:none;stroke:black;stroke-width:4.85px;stroke-linejoin:miter;stroke-miterlimit:5;"/></g></g></svg>
+      <h2>SNS</h2>
+      <p>And lastly this, the third column of representative placeholder content.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div>
+
+
+  <hr>
+  
+  <div class="row featurettepy">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+      <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<footer class="container">
+  <p class="float-end"><a href="#">Back to top</a></p>
+  <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+  {% for item in object_list %}
+<ul>
+    <li>{{ item.first_name }}</li>
+    <li>{{ item.last_name }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
+
+
