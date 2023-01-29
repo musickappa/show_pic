@@ -13,8 +13,7 @@ from django.core.validators import FileExtensionValidator
 
 class Myprofile(models.Model):
     user_id = models.IntegerField(verbose_name='ユーザ番号', unique=True,null=True,blank=True)
-    first_name y
-    = models.CharField(max_length=50, null=True,blank=True)
+    first_name  = models.CharField(max_length=50, null=True,blank=True)
     family_name = models.CharField(max_length=50, null=True,blank=True)
     career = models.CharField(max_length=50, null=True,blank=True)
     feature = models.CharField(max_length=50, null=True,blank=True)
